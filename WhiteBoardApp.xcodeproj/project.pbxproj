@@ -13,8 +13,8 @@
 		02F81ABC29A5009A00927EF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F81ABB29A5009A00927EF2 /* Preview Assets.xcassets */; };
 		02F81AC329A5012700927EF2 /* PKCanvasRepresentationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC229A5012700927EF2 /* PKCanvasRepresentationTextView.swift */; };
 		02F81AC529A5014C00927EF2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC429A5014C00927EF2 /* ImagePicker.swift */; };
-		02F81AC729A5016600927EF2 /* DrawingOnImageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC629A5016600927EF2 /* DrawingOnImageScreen.swift */; };
-		02F81AC929A5017F00927EF2 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC829A5017F00927EF2 /* DrawingViewModel.swift */; };
+		02F81AC729A5016600927EF2 /* PKCanvasRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC629A5016600927EF2 /* PKCanvasRepresentation.swift */; };
+		02F81AC929A5017F00927EF2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F81AC829A5017F00927EF2 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,8 @@
 		02F81ABB29A5009A00927EF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02F81AC229A5012700927EF2 /* PKCanvasRepresentationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasRepresentationTextView.swift; sourceTree = "<group>"; };
 		02F81AC429A5014C00927EF2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		02F81AC629A5016600927EF2 /* DrawingOnImageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingOnImageScreen.swift; sourceTree = "<group>"; };
-		02F81AC829A5017F00927EF2 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		02F81AC629A5016600927EF2 /* PKCanvasRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasRepresentation.swift; sourceTree = "<group>"; };
+		02F81AC829A5017F00927EF2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		02F81ACA29A501CA00927EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,12 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				02F81ACA29A501CA00927EF2 /* Info.plist */,
-				02F81AB429A5009900927EF2 /* WhiteBoardAppApp.swift */,
-				02F81AC829A5017F00927EF2 /* DrawingViewModel.swift */,
-				02F81AC629A5016600927EF2 /* DrawingOnImageScreen.swift */,
-				02F81AC429A5014C00927EF2 /* ImagePicker.swift */,
+				02F81AC629A5016600927EF2 /* PKCanvasRepresentation.swift */,
 				02F81AC229A5012700927EF2 /* PKCanvasRepresentationTextView.swift */,
+				02F81AC429A5014C00927EF2 /* ImagePicker.swift */,
+				02F81AC829A5017F00927EF2 /* ViewModel.swift */,
 				02F81AB629A5009900927EF2 /* ContentView.swift */,
+				02F81AB429A5009900927EF2 /* WhiteBoardAppApp.swift */,
 				02F81AB829A5009A00927EF2 /* Assets.xcassets */,
 				02F81ABA29A5009A00927EF2 /* Preview Content */,
 			);
@@ -154,9 +154,9 @@
 				02F81AB729A5009900927EF2 /* ContentView.swift in Sources */,
 				02F81AC529A5014C00927EF2 /* ImagePicker.swift in Sources */,
 				02F81AC329A5012700927EF2 /* PKCanvasRepresentationTextView.swift in Sources */,
-				02F81AC729A5016600927EF2 /* DrawingOnImageScreen.swift in Sources */,
+				02F81AC729A5016600927EF2 /* PKCanvasRepresentation.swift in Sources */,
 				02F81AB529A5009900927EF2 /* WhiteBoardAppApp.swift in Sources */,
-				02F81AC929A5017F00927EF2 /* DrawingViewModel.swift in Sources */,
+				02F81AC929A5017F00927EF2 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

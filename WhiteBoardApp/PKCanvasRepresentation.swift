@@ -25,7 +25,7 @@ struct PKCanvasRepresentation : UIViewRepresentable {
         if let image = UIImage(data: imageData){
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFit
-            imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 200)
+            imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 250)
             imageView.clipsToBounds = true
 
             let subView = canvas.subviews[0]

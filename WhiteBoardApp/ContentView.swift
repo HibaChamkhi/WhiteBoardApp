@@ -12,46 +12,45 @@ func dismissKeyboard() {
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 }
 
-
 struct ContentView: View {
-   
+    
     @State var isClicked : Bool = false
     @State var textButton : String = "plus"
-
+    
     @State var drawView : Bool = false
     @State var textView : Bool = false
-
- @StateObject var vm = DrawingViewModel()
     
+    @StateObject var vm = ViewModel()
     
     var body: some View {
         NavigationView{
             VStack{
-                     ChosesButton
+                ChosesButton
+                    .zIndex(5)
                     .padding(.vertical , 10)
-               ZStack {
-                   if textView{
-                       PKCanvasRepresentationTextView(canvas: $vm.canvas,  toolPicker: $vm.toolPicker)
-                         
+                ZStack {
+                    if textView{
+                        PKCanvasRepresentationTextView(canvas: $vm.canvas,  toolPicker: $vm.toolPicker)
+                        
                     }
-                   if drawView && !vm.image.isEmpty {
-                       PKCanvasRepresentation(imageData: $vm.image, canvas: $vm.canvas,  toolPicker: $vm.toolPicker)
+                    if drawView && !vm.image.isEmpty {
+                        PKCanvasRepresentation(imageData: $vm.image, canvas: $vm.canvas,  toolPicker: $vm.toolPicker)
                     }
                 }
-               .frame(maxWidth: .infinity ,maxHeight: .infinity, alignment: .center)
+                .zIndex(1)
+                .frame(maxWidth: .infinity ,maxHeight: .infinity, alignment: .center)
                 .fullScreenCover(isPresented: $vm.showImgePicker, onDismiss: nil) {
                     ImagePicker(imageData: $vm.image, showPicker: $vm.showImgePicker)
                         .ignoresSafeArea()
                 }
                 .padding()
-
+                
             }
         }
- 
+        
     }
-
+    
 }
-
 
 extension ContentView {
     
@@ -59,7 +58,7 @@ extension ContentView {
         ZStack{
             if isClicked {
                 ZStack{
-     
+                    
                     Rectangle()
                         .foregroundColor(.black)
                         .frame(width: 45 ,height: 45)
@@ -94,7 +93,7 @@ extension ContentView {
                             isClicked = false
                             drawView = true
                             textView = false
-                        
+                            
                         }
                     
                     Rectangle()
@@ -111,7 +110,7 @@ extension ContentView {
                             vm.SaveImage()
                             isClicked = false
                         }
-                   
+                    
                     
                     Rectangle()
                         .foregroundColor(.black)
@@ -125,11 +124,12 @@ extension ContentView {
                         .offset(x:60 , y: 10)
                         .onTapGesture {
                             vm.cancelImageEditing()
-//                            vm.image = Data(count: 0)
-//                            vm.canvas = PKCanvasView()
+                            drawView = false
+                            textView = false
                             isClicked = false
+                            textButton = "plus"
+                            
                         }
-                    
                 }
             }
             
@@ -155,7 +155,6 @@ extension ContentView {
     }
     
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
